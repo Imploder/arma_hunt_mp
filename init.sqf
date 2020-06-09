@@ -6,7 +6,7 @@ addMissionEventHandler ["EntityKilled",{
     params ["_killedUnit","_killer","_triggerMan"];
 	//Add money to police, allow civi clothes steal
     if (side _killedUnit isEqualTo civilian AND side _triggerMan isEqualTo west) then {
-		[player,100] call grad_lbm_fnc_addFunds;
+		[player,10000] call grad_lbm_fnc_addFunds;
 		_triggerMan addRating (-(rating _triggerMan));
 		_killedUnit addAction ["Take Clothes", "TakeClothes.sqf",[],1,false,true,"",""];
     };
@@ -16,3 +16,9 @@ addMissionEventHandler ["EntityKilled",{
 		_triggerMan addRating (-(rating _triggerMan));
     };
 }];
+
+// ToDo:
+// Holster Weapon
+// Shop exchanges equipment
+// Add more shop items (More weapons + Backpack)
+// 
