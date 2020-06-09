@@ -1,0 +1,132 @@
+#include "modules\grad-listBuymenu\grad_listBuymenu.hpp"
+
+class CfgFunctions {
+    #include "modules\grad-listBuymenu\cfgFunctions.hpp"
+};
+
+class CfgGradBuymenu {
+    vehicleMarkers = 1;
+    tracking = 1;
+    trackingTag = "myMission";
+
+    //buyables set:
+    class PoliceStuff {
+
+        //category:  
+        class Weapons {
+            kindOf = "Weapons";
+            displayName = "Weapons";
+
+            //items of this category:
+            class hgun_Pistol_heavy_02_F {
+                displayName = "The Enforcer";
+                description = "Better than a knee on the neck";
+                price = 1; //800
+                stock = 10;
+            };
+			
+			class SMG_01_F {
+				displayName = "Vector"
+				description = "Stop Resisting";
+                price = 1; //1500
+                stock = 10;
+			};
+        };
+
+		class Wearables {
+            displayName = "Wearables";
+            kindOf = "Wearables";
+			
+			class V_Press_F {
+				displayName = "Bulletproof Vest";
+                description = "Got a supply of these from some CNN reporters";
+                amount = 1;
+                price = 1; //800
+                stock = 10;
+			};
+			
+			class H_HelmetIA {
+				displayName = "Bulletproof Helmet";
+                description = "National Guard donations";
+                amount = 1;
+                price = 1; //800
+                stock = 10;
+			};
+		};
+
+		class Items {
+            displayName = "Items";
+            kindOf = "Items";
+			
+			class 16Rnd_9x21_Mag {
+				displayName = "Glock Ammo";
+                description = "Ask not what your country can do for you, but what you can do for your country.";
+                amount = 1;
+                price = 1; //200
+                stock = 10;
+			};
+			
+			class 6Rnd_45ACP_Cylinder {
+				displayName = "Enforcer Ammo";
+                description = "";
+                amount = 2;
+                price = 1; //200
+                stock = 10;
+			};
+			
+			class 30Rnd_45ACP_Mag_SMG_01 {
+				displayName = "Vector Ammo";
+                description = "";
+                amount = 1;
+                price = 1; //200
+                stock = 10;
+			};
+
+			class muzzle_snds_L {
+				displayName = "Glock Silencer";
+                description = "The protesters won't even hear you coming.";
+                amount = 1;
+                price = 1; //400
+                stock = 10;
+			};
+
+            class ACE_fieldDressing {
+                displayName = "Bandages (x10)";
+                description = "10 simple bandages in sterile packaging.";
+                amount = 10;
+                price = 1; // 100
+                stock = 100;     //note that a total of 400 bandages can be bought (in sets of 10)
+			};
+				
+			class ACE_morphine {
+                displayName = "Morphine (x2)";
+                description = "A hobo's favourite treat.";
+                amount = 10;
+                price = 1; // 100
+                stock = 100;
+			};
+				
+			class ACE_epinephrine {
+                displayName = "Epinephrine (x2)";
+                description = "For when killing protesters doesn't get your heart pumping anymore.";
+                amount = 10;
+                price = 1; // 100
+                stock = 100;
+            };
+		};
+			
+		class Other {
+            displayName = "Other";
+            kindOf = "Other";	
+			
+			class endMission {
+				displayName = "Retirement";
+                description = "A lovely pension";
+				amount = 1;
+                price = 1; // 5000
+                stock = 10;
+				code = "CONTINUE";
+			};
+		};
+    };
+};
