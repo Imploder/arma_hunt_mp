@@ -1,0 +1,3 @@
+[submodule "modules/grad-listBuymenu"]
+	path = modules/grad-listBuymenu
+	url = https://github.com/gruppe-adler/grad-listBuymenu.git
